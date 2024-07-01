@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/AlecAivazis/survey/v2 v2.3.7
-	github.com/aws/aws-sdk-go v1.51.15
+	github.com/aws/aws-sdk-go v1.54.11
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/chanzuckerberg/go-misc/aws v0.0.0-20240404202010-3f56fc5722ce
 	github.com/chanzuckerberg/go-misc/oidc_cli v0.0.0-20240404202010-3f56fc5722ce
@@ -16,7 +16,7 @@ require (
 	github.com/golang/mock v1.6.0
 	github.com/gorilla/handlers v1.5.2
 	github.com/hashicorp/go-multierror v1.1.1
-	github.com/honeycombio/beeline-go v1.15.0
+	github.com/honeycombio/beeline-go v1.17.0
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/mitchellh/go-homedir v1.1.0
@@ -24,7 +24,7 @@ require (
 	github.com/peterhellberg/link v1.2.0
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.3
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.8.1
 	github.com/stretchr/testify v1.9.0
 	gopkg.in/ini.v1 v1.67.0
 )
@@ -48,11 +48,11 @@ require (
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
-	github.com/honeycombio/libhoney-go v1.22.0 // indirect
+	github.com/honeycombio/libhoney-go v1.23.1 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
-	github.com/klauspost/compress v1.17.3 // indirect
+	github.com/klauspost/compress v1.17.8 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d // indirect
@@ -62,7 +62,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/pquerna/cachecontrol v0.2.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/vmihailenco/msgpack/v5 v5.3.5 // indirect
+	github.com/vmihailenco/msgpack/v5 v5.4.1 // indirect
 	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
 	github.com/zalando/go-keyring v0.2.4 // indirect
 	golang.org/x/crypto v0.22.0 // indirect
@@ -71,7 +71,7 @@ require (
 	golang.org/x/term v0.19.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
-	google.golang.org/grpc v1.59.0 // indirect
+	google.golang.org/grpc v1.62.1 // indirect
 	google.golang.org/protobuf v1.33.0 // indirect
 	gopkg.in/alexcesaro/statsd.v2 v2.0.0 // indirect
 	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
