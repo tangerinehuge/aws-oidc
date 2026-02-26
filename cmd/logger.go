@@ -6,6 +6,7 @@ import (
 	"log/slog"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 // multiHandler fans out log records to multiple handlers
@@ -55,7 +56,17 @@ func getDefaultLogFile() string {
 	if err != nil {
 		return "/tmp/aws-oidc.log"
 	}
-	return filepath.Join(homeDir, ".aws-oidc", "logs", "aws-oidc.log")
+
+	hostname, _ := os.Hostname()
+	if hostname == "" {
+		hostname = "unknown"
+	}
+	hostname = sanitizeFilename(hostname)
+
+	return filepath.Join(
+		homeDir, ".aws-oidc", "logs",
+		fmt.Sprintf("aws-oidc.%s.log", hostname),
+	)
 }
 
 func initLogger(verbosity int, logFile string) (func() error, error) {
@@ -101,4 +112,18 @@ func initLogger(verbosity int, logFile string) (func() error, error) {
 	})
 	slog.SetDefault(logger)
 	return closer, nil
+}
+
+func sanitizeFilename(s string) string {
+	s = filepath.Base(s)
+	s = strings.Map(func(r rune) rune {
+		if r == '/' || r == '\\' || r == '\x00' {
+			return '-'
+		}
+		return r
+	}, s)
+	if s == "" || s == "." || s == ".." {
+		return "unknown"
+	}
+	return strings.ToLower(s)
 }
